@@ -1,3 +1,5 @@
+module AdventOfCode202102
+
 directions = Dict("forward" => 1, "down" => -2, "up" => 2)
 A = [(d, parse(Int, x)) for (d,x) in split.(readlines("input.txt"))]
 v = [0,0]
@@ -23,3 +25,5 @@ for (d,x) in A
     end
 end
 println("Part 2: ", reduce(*, v, init=1))
+
+end

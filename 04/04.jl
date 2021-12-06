@@ -1,9 +1,12 @@
+module AdventOfCode202104
+
 Ai = readlines("input.txt")
 game = parse.(Int, split(Ai[1], ","))
 n = length(Ai) ÷ 6
 boards = []
 i = 2
 while i < length(Ai)
+    global i
     s = Ai[i+1:i+5]
     b = reshape(parse.(Int, reduce(vcat, split.(strip.(s), r" +"))), 5, 5)'
     push!(boards, b)
@@ -37,4 +40,6 @@ for i ∈ 1:length(game), b in boards
             push!(haswon, b)
         end
     end
+end
+
 end

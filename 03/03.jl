@@ -1,3 +1,5 @@
+module AdventOfCode202103
+
 using DataFrames, StatsBase, DataStructures
 Ai = reduce(vcat, [parse.(Int, split(line, "")) for line in readlines("input.txt")]')
 A = DataFrame(Ai, :auto)
@@ -29,3 +31,5 @@ println("Part 2: ", o2 * co2)
 # This problem is a little trickier than it might sound at first.
 # Requires some bit twiddling, counting, and flow control (if/else statements).
 # Being able to reconstruct a binary value from bit strings is important.
+
+end
