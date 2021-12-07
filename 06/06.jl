@@ -23,7 +23,9 @@ println("Part 1: ", length(f(A, 80)))
 # of a number. So if you have three fish at 8, then keep
 # the 8 and also a [3] to hold all of them at once.
 #
-# Actually, a Dict will be more convenient in a 1-index language.
+# Actually, a Dict will be more convenient in a 1-indexed language.
+#
+# This might not look like it, but this is an instance of dynamic programming!
 function g(c, t)
     if t > 0
         c2 = DefaultDict(0)
