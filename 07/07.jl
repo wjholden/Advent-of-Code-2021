@@ -1,6 +1,6 @@
 module AdventOfCode202107
 
-A = parse.(Int, split(readline("input.txt"), ","))
+A = parse.(Int, split(readline("../puzzles/day07.txt"), ","))
 
 function loss(X, m)
     sum([abs(x - m) for x ∈ X])

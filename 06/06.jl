@@ -1,6 +1,6 @@
 module AdventOfCode202106
 
-A = parse.(Int, split(readline("input.txt"), ","))
+A = parse.(Int, split(readline("../puzzles/day06.txt"), ","))
 
 # Naive method: actually count the fish
 function f(a, t)

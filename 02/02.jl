@@ -1,7 +1,7 @@
 module AdventOfCode202102
 
 directions = Dict("forward" => 1, "down" => -2, "up" => 2)
-A = [(d, parse(Int, x)) for (d,x) in split.(readlines("input.txt"))]
+A = [(d, parse(Int, x)) for (d,x) in split.(readlines("../puzzles/day02.txt"))]
 v = [0,0]
 for (d,x) in A
     i = directions[d]

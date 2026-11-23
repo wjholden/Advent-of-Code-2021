@@ -1,6 +1,6 @@
 module AdventOfCode202101
 
-A = parse.(Int, readlines("input.txt"))
+A = parse.(Int, readlines("../puzzles/day01.txt"))
 g = [A[i+1] > A[i] for i in 1:length(A)-1]
 println("Part 1: ", sum(g))
 

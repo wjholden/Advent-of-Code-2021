@@ -1,6 +1,6 @@
 module AdventOfCode202104
 
-Ai = readlines("input.txt")
+Ai = readlines("../puzzles/day04.txt")
 game = parse.(Int, split(Ai[1], ","))
 n = length(Ai) ÷ 6
 boards = []

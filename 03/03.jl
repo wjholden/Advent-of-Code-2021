@@ -1,7 +1,7 @@
 module AdventOfCode202103
 
 using DataFrames, StatsBase, DataStructures
-Ai = reduce(vcat, [parse.(Int, split(line, "")) for line in readlines("input.txt")]')
+Ai = reduce(vcat, [parse.(Int, split(line, "")) for line in readlines("../puzzles/day03.txt")]')
 A = DataFrame(Ai, :auto)
 c = mode.(eachcol(A))
 γ = foldl((a, v) -> (a << 1) | v, c)
